@@ -199,7 +199,7 @@ def show_tasks():
         for i, task in enumerate(todo_list, 1):
             print(f"{i}. Task: {task['task']}, Due Date: {task['date']}")
 
-def check_reminders():
+def check_reminder():
     """Check if any task is due today."""
     print("\n--- Checking Reminders ---")
     today = datetime.now().strftime("%Y-%m-%d")
@@ -217,7 +217,7 @@ def reminder_service():
     """Start the reminder service to check for tasks daily."""
     print("\n--- Reminder Service Started ---")
     while True:
-        check_reminders()
+        check_reminder()
         print("\nNext reminder check will be in 24 hours.")
         time.sleep(86400)  # Wait for 24 hours (86400 seconds)
 
